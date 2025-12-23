@@ -24,19 +24,12 @@ struct ContentView: View {
                     .aspectRatio(1, contentMode: .fit)
                     .foregroundStyle(colors[index])
             }
-            HStack {
-                VStack {
-                    Circle()
-                    Circle()
-                }
-                VStack {
-                    Circle()
-                    Circle()
-                }
-            }
+            MatchMarkers(matches: [.exact, .inexact, .noMatch, .exact])
         }
     }
 }
+
+
 
 #Preview {
     ContentView()
